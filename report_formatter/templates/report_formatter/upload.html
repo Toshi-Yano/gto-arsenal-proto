@@ -1,0 +1,14 @@
+{% block content %}
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+    <form action="" method="post" enctype="multipart/form-data">
+      <h4>アップロードするファイルを選択</h4>
+      {% csrf_token %}
+      <div class="form-group">
+        {{ form.file }}
+      </div>
+      <button type="submit" class="btn btn-primary">実行</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
